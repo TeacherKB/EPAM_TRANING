@@ -21,6 +21,7 @@ const fsWriteFile = util.promisify(fs.writeFile);
 function getAllTodos() {
   return fsReadFile(STORAGE_PATH, { encoding: 'utf8', flag: O_RDONLY | O_CREAT })
     .then((data) => {
+      if (data == "") data = "{\"todos\":[]}"
       return JSON.parse(data);
     })
     .then((storage) => {
@@ -90,6 +91,15 @@ function updateTodo(id, change, todos) {
   return result;
 }
 
+function readTodo(id, todos) {
+  try {
+    const index = findTodoIndex(id, todos);
+    console.log(todos[index]);
+  } catch (e) {
+    console.log("*\"TODO item <id> not found\"*");
+  }
+}
+
 function removeTodo(id, todos) {
   const index = findTodoIndex(id, todos);
   const result = [...todos];
@@ -138,7 +148,6 @@ program
   .description('Create new TODO item')
   .action(() => {
     let receivedAnswers;
-
     prompt(createQuestions)
       .then((answers) => {
         receivedAnswers = answers;
@@ -207,12 +216,42 @@ program
   });
 
 program
+  .command('read <id>')
+  .alias('rd')
+  .description('read TODOs')
+  .action((id) => {
+    getAllTodos()
+      .then((todos) => {
+        readTodo(id, todos)
+      })
+      .then(inform)
+      .catch((e) => {
+        throw e;
+      });
+  });
+
+program
   .command('like <id>')
   .description('Like TODO item')
   .action((id) => {
     getAllTodos()
       .then((todos) => {
         const result = updateTodo(id, { isLiked: true }, todos);
+        return saveAllTodos(result).then(() => id);
+      })
+      .then(inform)
+      .catch((e) => {
+        throw e;
+      });
+  });
+
+program
+  .command('unlike <id>')
+  .description('unlike TODO item')
+  .action((id) => {
+    getAllTodos()
+      .then((todos) => {
+        const result = updateTodo(id, { isLiked: false }, todos);
         return saveAllTodos(result).then(() => id);
       })
       .then(inform)

@@ -1,7 +1,7 @@
 {
   "name": "todos",
   "version": "1.0.0",
-  "description": "",
+  "description": "### Prerequisite",
   "main": "index.js",
   "engines": {
     "node": "^8.9.4"
@@ -20,10 +20,15 @@
     "url": "https://github.com/McReader/spring-js-cources-2018/issues"
   },
   "preferGlobal": true,
-  "bin": "./index.js",
+  "bin": {
+    "todos": "./index.js"
+  },
   "homepage": "https://github.com/McReader/spring-js-cources-2018#readme",
   "dependencies": {
-    "commander": "2.14.1",
-    "inquirer": "5.1.0"
-  }
+    "commander": "^2.15.1",
+    "inquirer": "^5.1.0",
+    "semver": "^5.5.0"
+  },
+  "devDependencies": {},
+  "keywords": []
 }
