@@ -20,7 +20,7 @@
 1. **Intro**
 
 2. **Program review. NodeJS & npm. Git.**
-    
+
     We will try to answer on following questions: What is this? How to use? Why do we need this tools?
 
     *Useful links:*
@@ -35,7 +35,7 @@
 3. **Terminal app**
 
     * **Setup application. Requirements analysis.**
-    
+
         *Useful links:*
         - https://scotch.io/tutorials/build-an-interactive-command-line-application-with-nodejs
         - https://www.npmjs.com/package/commander
@@ -51,17 +51,24 @@
         Implement application requirements.
 
 4. **HTML/CSS**
-    
+
     * **Lesson 1**
+        *Useful links:*
+        - https://htmlacademy.ru/courses/4/run/1
+        - http://flexboxfroggy.com
+        - https://www.freecodecamp.org/map-aside#nested-collapseHTML5andCSS
+
     * **Lesson 2**
+        Task with a star (not required) - Create markup using BEM for Todo App
 
-5. **????**
+    * **Lesson 3**
+        Task with a star (not required) - Style markup for Todo App
 
-6. **Intermediate check**
+5. **Intermediate check**
 
     Terminal application made by students should be verified by experts.
 
-7. **Web client app**
+6. **Web client app**
 
     * **Application setup**
 
@@ -71,11 +78,16 @@
         - https://webpack.js.org/
         - https://webpack.js.org/configuration/dev-server/
         - https://github.com/facebook/create-react-app
+        - https://gulpjs.com/
+        - https://rollupjs.org/guide/en
+        - https://learn.javascript.ru/modules
+        - https://babeljs.io/
+        - https://eslint.org/
 
     * **Introduction to React**
 
         Introduction into react basics
-        
+
         *Useful links:*
         - https://reactjs.org/
 
@@ -88,24 +100,24 @@
         Business logic implemented for terminal app should be migrated to Web Client app.
 
     * **Architectural mistakes analysis**
-    
+
         Highlight and analyse mistakes made during implementation of terminal app. Fix this mistakes.
 
     * **Persist application data to file**
-    
+
         Make application persist changes made by user.
 
-8. **Code quality**
+7. **Code quality**
+
+8. **????**
 
 9. **????**
 
-10. **????**
-
-11. **Intermediate check**
+10. **Intermediate check**
 
     Web Client application made by students should be verified by experts.
 
-12. **Сlient-Server app**
+11. **Сlient-Server app**
 
     * **Client-Server architecture. REST basics. Setup NodeJS server app**
 
@@ -114,33 +126,33 @@
         - http://expressjs.com/
 
     * **Move business logic to server side**
-    
+
     * **Architectural mistakes analysis**
-                
+
         Highlight and analyse mistakes made during implementation of Web Client app. Fix this mistakes. Improve components modularity
 
     * **Unit tests**
 
         Importance of testing will be discussed. Discover testing approaches. Cover implemented business logic by unit tests.
-    
+
     * **Persist application data into MongoDB**
-    
+
         *Useful links:*
         - https://www.mongodb.com/
         - https://mongodb.github.io/node-mongodb-native/
         - http://mongoosejs.com/
 
+12. **????**
+
 13. **????**
 
 14. **????**
 
-15. **????**
-
-16. **Intermediate check**
+15. **Intermediate check**
 
     Client-Server application made by students should be verified by experts.
 
-17. **Desktop app**
+16. **Desktop app**
 
     * **Introduction to electron. Application setup**
 
